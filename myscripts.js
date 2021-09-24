@@ -10,8 +10,6 @@ function compChoiceF(){
     return compChoice
 }
 
-let userChoice= userChoiceF();
-let compChoice= compChoiceF();
 
 function playRound(userChoice, compChoice){
     
@@ -47,6 +45,8 @@ function playRound(userChoice, compChoice){
 let playerScore = 0;
 let computerScore = 0;
 
+console.log(playGame());
+function playGame(){
 for ( i=0; i<5; i++){
 
     let userChoice= userChoiceF();
@@ -57,11 +57,7 @@ for ( i=0; i<5; i++){
     console.log(playRound(userChoice, compChoice));
     console.log("You have  "+playerScore , " The computer has " +computerScore);
 }
-
-
-
-
-
+}
 
 
 
