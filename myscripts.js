@@ -17,27 +17,27 @@ function playRound(userChoice, compChoice){
     if(userChoice === compChoice){
         return "That was a draw!";
     }
-    else if(userChoice === "rock" && compChoice === "scissors"){
+    else if(userChoice == "rock" && compChoice == "scissors"){
             playerScore++ ;
             return "Rock beats Scissors, you win!";
         }
-        else if(userChoice ="rock" && compChoice ==="paper"){
+        else if(userChoice =="rock" && compChoice =="paper"){
             computerScore++ ;
             return "Paper beats Rock, you lose!" ;
          }
-    else if(userChoice === "paper" && compChoice === "scissors"){
+    else if(userChoice == "paper" && compChoice == "scissors"){
             computerScore++;
             return "Scissors beats Paper, you lose!" ;
         }
-        else if (userChoice = "paper" && compChoice === "rock"){
+        else if (userChoice == "paper" && compChoice == "rock"){
             playerScore++;
             return "Paper beats Rock, you win!";
     }
-    else if(userChoice === "scissors" && compChoice === "paper"){
+    else if(userChoice == "scissors" && compChoice == "paper"){
             playerScore++;
             return "Scissors beats Paper, you win!" ;
         }
-        else if(userChoice === "scissors" && compChoice === "rock"){
+        else if(userChoice == "scissors" && compChoice == "rock"){
             computerScore++;
             return "Rock beats scissors, you lose!" ;
         }
@@ -57,7 +57,14 @@ for ( i=0; i<5; i++){
     console.log(playRound(userChoice, compChoice));
     console.log("You have  "+playerScore , " The computer has " +computerScore);
 }
+if(playerScore > computerScore){
+    return "You Win the game!"
 }
-
-
+else if (playerScore == computerScore){
+    return "The game is a draw!";
+}
+else return " You Lose the game !"
+}
+    
+            
 
