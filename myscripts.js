@@ -22,7 +22,7 @@ function getComputerChoice(){
 }
 
 function win(userChoice, compChoice){
-    if(userScore=== 5){return}
+    
     userScore++;
     userScore_span.innerHTML = userScore;
     result_div.innerHTML = convertWord(userChoice) + " beats " + convertWord(compChoice) +", you win!";
@@ -42,6 +42,7 @@ function draw(userChoice, compChoice){
 }
 
 function game(userChoice){
+    if (userScore == 5 || compScore == 5){resetScore};
     const compChoice = getComputerChoice();
    
     switch(userChoice + compChoice){
@@ -87,5 +88,13 @@ function exit(){
         
         setTimeout(function() {window.location.reload();}, 2000 )
     }
+function resetScore()  {
+    userScore =0;
+    compScore =0;
+    userScore_span.innerHTML = userScore;
+    compScore_span.innerHTML = compScore;
+
+}  
 };
 main();
+
